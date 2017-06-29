@@ -11,20 +11,11 @@
     <link rel="stylesheet" href={{ URL::to('css/styles.css') }}>
 </head>
 <body>
-@include('partials.header')
-<div class="container">
-    <nav class="navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="">Our Guide</a>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href=""> Posts</a> </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+@include('partials.admin-header')
+    <div class="container">
+
     @yield('content')
-</div>
+    </div>
 
 </body>
 </html>
