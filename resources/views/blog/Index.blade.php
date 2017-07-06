@@ -23,27 +23,35 @@
 
             <p class="quote">Laravel is beutyful</p>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="post-title">Lets Learn</h1>
-                <p>This is our learning blog</p>
-                <p><a href="{{route('blog.post',['id' => 1])}}">Read more..</a></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="post-title">Our Next Step</h1>
-                <p>Lets first go with the basics</p>
-                <p><a href="{{route('blog.post',['id' => 2])}}">Read more..</a></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="post-title">Start with Our Homestead Laravel</h1>
-                <p>Laravel is packed with surprises and lots of commands</p>
-                <p><a href="{{route('blog.post',['id' => 3])}}">Read more..</a></p>
-            </div>
-        </div>
     </div>
+
+        @foreach($posts as $post)
+        <div class="row">
+            <div class="col-md-12">
+                {{--<h1 class="post-title">Lets Learn</h1>--}}
+                {{--<p>This is our learning blog</p>--}}
+                <h1 class="post-title">{{$post['title']}}</h1>
+                <p>{{$post['content']}}</p>
+                <p><a href="{{route('blog.post',['id' => array_search($post,$posts)])}}">Read more..</a></p>
+
+            </div>
+        </div>
+
+        {{--<div class="row">--}}
+            {{--<div class="col-md-12">--}}
+                {{--<h1 class="post-title">Our Next Step</h1>--}}
+                {{--<p>Lets first go with the basics</p>--}}
+                {{--<p><a href="{{route('blog.post',['id' => 2])}}">Read more..</a></p>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<div class="row">--}}
+            {{--<div class="col-md-12">--}}
+                {{--<h1 class="post-title">Start with Our Homestead Laravel</h1>--}}
+                {{--<p>Laravel is packed with surprises and lots of commands</p>--}}
+                {{--<p><a href="{{route('blog.post',['id' => 3])}}">Read more..</a></p>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+    @endforeach
 
 @endsection

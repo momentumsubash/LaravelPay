@@ -2,7 +2,7 @@
 @section('content')
     <div class="col-md-12">
         <div class="quote">
-            <p> {{$post['title']}}</p>
+            <p> {{$pst['title']}}</p>
         </div>
 
     </div>
@@ -10,8 +10,9 @@
         <div class="col-md-12">
             <h1 class="post-title">Lets Learn</h1>
             {{--<p>All the post related description </p>--}}
-            <p> {{$post['content']}}</p>
-            {{--<p><a href="{{route('blog.post',['id' => 1])}}">Read more..</a></p>--}}
+            <p>{{$pst['content']}} </p>
+            <a href="{{url('/')}}">Go Back</a>
         </div>
+
     </div>
-    @endsection
+@endsection

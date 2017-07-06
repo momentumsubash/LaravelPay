@@ -12,6 +12,7 @@
                 <div class="form-group">
                     <label for="content">content</label>
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
+                    <input type="hidden" name="id" value="{{$postId}}">
                     <input type="text" class="form-control" id="content" name="content" value="{{$post['content']}}">
                 </div>
                 <button type="submit" class="btn btn-primary">submit</button>
